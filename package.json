@@ -1,0 +1,71 @@
+{
+  "name": "orfeo-for-max",
+  "version": "0.1.0",
+  "description": "Orfeo for Cycling '74's Max.",
+  "keywords": [
+    "Orfeo",
+    "DSL",
+    "programming",
+    "language",
+    "compiler",
+    "music",
+    "Cycling",
+    "Max"
+  ],
+  "main": "orfeo.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "eslintConfig": {
+    "globals": {
+      "describe": "readonly",
+      "it": "readonly"
+    },
+    "rules": {
+      "key-spacing": [
+        "error",
+        {
+          "mode": "minimum"
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline"
+        }
+      ],
+      "no-multi-spaces": [
+        "error",
+        {
+          "exceptions": {
+            "CallExpression": true,
+            "ObjectExpression": true,
+            "ArrayExpression": true,
+            "IfStatement": true
+          }
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "standardx": "standardx"
+  },
+  "author": "Pierre-Emmanuel Lévesque <pierre.e.levesque@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orfeolang/orfeo-for-max.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orfeolang/orfeo-for-max/issues"
+  },
+  "homepage": "https://github.com/orfeolang/orfeo-for-max#readme",
+  "dependencies": {
+    "@orfeo/orfeo": "0.1.0",
+    "@orfeo/timeline-validator": "0.1.0"
+  },
+  "devDependencies": {
+    "standardx": "^5.0.0"
+  }
+}

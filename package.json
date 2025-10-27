@@ -52,7 +52,7 @@
     "standardx": "standardx"
   },
   "author": "Pierre-Emmanuel Lévesque <pierre.e.levesque@gmail.com>",
-  "license": "MIT",
+  "license": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/orfeolang/orfeo-for-max.git"

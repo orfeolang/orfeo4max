@@ -24,11 +24,3 @@ http://orfeo.org
 ## Copyright
 
 Copyright (c) 2019-2020, <a href="https://github.com/pelevesque">Pierre-Emmanuel Lévesque</a>
-
-## License
-
-MIT
-
-<div align="center">
-  <sub>Built with ❤︎ by <a href="https://github.com/pelevesque">Pierre-Emmanuel Lévesque</a>
-</div>

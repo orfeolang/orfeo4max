@@ -1,0 +1,7 @@
+{
+    "headers": [
+        "Accept: version=1",
+        "Content-Type: application/json"
+    ],
+    "urlBase": "https://orfeolang.com/api/"
+}

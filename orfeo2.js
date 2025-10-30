@@ -1,18 +1,41 @@
 'use strict'
 
-const maxApi = require('max-api')
+const max = require('max-api')
 const fs = require('fs')
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
 
-maxApi.addHandler('getApiVersions', async () => {
+const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
+let headers = {
+    'Accept': 'version=' + config.api.version,
+    'Content-Type': 'application/json',
+}
+
+const getVersions = async (type) => {
     try {
-        const response = await fetch(config.urlBase + 'versions', {
+        const response = await fetch(config.api.url + `/${type}/versions`, {
+            headers: headers,
             method: 'GET',
-            headers: config.headers,
         })
-        const json = await response.json()
-        maxApi.post(data)
+        if ( ! response.ok) {
+            max.outlet({
+                'message': `HTTP error ${response.status}`
+            })
+        }
+        else
+        {
+            const json = await response.json()
+            max.outlet(json)
+        }
     } catch (error) {
-        maxApi.post(error)
+        max.outlet({
+            'message': `Error fetching data: ${error}`
+        })
     }
+}
+
+max.addHandler('getApiVersions', async () => {
+    getVersions('api')
+})
+
+max.addHandler('getCompilerVersions', async () => {
+    getVersions('compiler')
 })

@@ -1,7 +1,6 @@
 {
-    "headers": {
-        "Accept":  "version=1",
-        "Content-Type": "application/json"
-    },
-    "urlBase": "https://orfeolang.com/api/"
+    "api": {
+        "url": "https://orfeolang.com/api",
+        "version": "1.0"
+    }
 }

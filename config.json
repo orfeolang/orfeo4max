@@ -2,5 +2,8 @@
     "api": {
         "url": "https://orfeolang.com/api",
         "version": "1.0"
+    },
+    "compiler": {
+        "version": "Orfeo-JS 0.2.0"
     }
 }
